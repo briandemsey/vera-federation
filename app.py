@@ -467,6 +467,19 @@ def main():
     ])
 
     st.sidebar.divider()
+    st.sidebar.markdown("**Launch a Jurisdiction**")
+    jurisdiction_names = df['jurisdiction'].tolist()
+    selected_jx = st.sidebar.selectbox("Select Jurisdiction", jurisdiction_names, label_visibility="collapsed")
+    slug = df[df['jurisdiction'] == selected_jx]['app_slug'].values[0]
+    url = f"https://{slug}.onrender.com"
+    st.sidebar.markdown(
+        f"<a href='{url}' target='_blank'>"
+        f"<button style='width:100%;background:#000;color:#fff;border:none;padding:8px;cursor:pointer;font-size:0.9rem;'>"
+        f"Open {selected_jx} VERA</button></a>",
+        unsafe_allow_html=True,
+    )
+
+    st.sidebar.divider()
     st.sidebar.markdown("""
     **Coverage:**
     - 50 US States + DC
