@@ -109,38 +109,8 @@ def load_jurisdictions():
 # ============================================================================
 
 def check_password():
-    if 'authenticated' not in st.session_state:
-        st.session_state.authenticated = False
-    if st.session_state.authenticated:
-        return True
-
-    st.markdown(f"""
-    <div style="text-align: center; padding: 60px 20px;">
-        <h1 style="color: {HEDU_BLACK}; font-size: 3rem; margin-bottom: 5px;">VERA Federation</h1>
-        <p style="color: #666; font-size: 1.2rem; margin-bottom: 10px;">Cross-Jurisdiction Comparison Engine</p>
-        <p style="color: #999; font-size: 0.95rem; margin-bottom: 40px;">
-            Compare oral-written deltas, achievement gaps, and EL outcomes<br>across 55 jurisdictions in 6 countries
-        </p>
-    </div>
-    """, unsafe_allow_html=True)
-
-    col1, col2, col3 = st.columns([1, 2, 1])
-    with col2:
-        password = st.text_input("Enter access code:", type="password", key="pw")
-        if st.button("Access VERA Federation", use_container_width=True):
-            if password == APP_PASSWORD:
-                st.session_state.authenticated = True
-                st.rerun()
-            else:
-                st.error("Invalid access code")
-
-    st.markdown("""
-    <div style="text-align: center; margin-top: 60px; color: #999; font-size: 0.85rem;">
-        <p>55 jurisdictions | 50 US states + DC | Australia | New Zealand | Canada | Netherlands | Japan</p>
-        <p style="margin-top: 10px;">Contact: brian@h-edu.solutions</p>
-    </div>
-    """, unsafe_allow_html=True)
-    return False
+    st.session_state.authenticated = True
+    return True
 
 
 # ============================================================================
