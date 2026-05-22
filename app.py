@@ -16,6 +16,7 @@ import plotly.graph_objects as go
 # ============================================================================
 
 APP_HEDU_BLACK = "#000000"
+HEDU_BLACK = "#000000"
 HEDU_GOLD = "#FFD700"
 HEDU_BLUE = "#002B5C"
 HEDU_RED = "#CC0000"
