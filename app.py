@@ -107,10 +107,6 @@ def load_jurisdictions():
 # AUTHENTICATION
 # ============================================================================
 
-def check_password():
-    st.session_state.authenticated = True
-    return True
-
 
 # ============================================================================
 # PAGES
