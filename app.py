@@ -442,6 +442,16 @@ def main():
     # Sidebar
     st.sidebar.markdown(f"""
     <div style="text-align: center; padding: 20px 0;">
+        <a href="https://h-edu.solutions" style="
+            display: inline-block;
+            color: {HEDU_BLACK};
+            text-decoration: none;
+            font-size: 0.85rem;
+            padding: 6px 14px;
+            border: 1px solid {HEDU_BLACK};
+            border-radius: 4px;
+            margin-bottom: 16px;
+        ">&#8592; H-EDU.Solutions</a>
         <h2 style="color: {HEDU_BLACK}; margin: 0;">VERA</h2>
         <p style="color: #666; font-size: 0.85rem; margin-top: 5px;">Federation Engine</p>
         <p style="color: #999; font-size: 0.75rem;">55 Jurisdictions | 6 Countries</p>
